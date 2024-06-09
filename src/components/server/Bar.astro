@@ -1,0 +1,59 @@
+---
+const currentPath = Astro.url.pathname;
+
+type RailItem = {
+  label?: string;
+  href: string;
+  icon: string;
+};
+
+const rail: Array<RailItem> = [
+  {
+    href: '/',
+    icon: 'd20',
+  },
+  {
+    href: '/design-tokens',
+    icon: 'tokens',
+    label: 'Tokens',
+  },
+  {
+    href: '/inputs',
+    icon: 'gamepad',
+    label: 'inputs',
+  },
+  {
+    href: '/theming',
+    icon: 'palette',
+    label: 'Theming',
+  },
+  {
+    href: '/components',
+    icon: 'components',
+    label: 'Components',
+  },
+  {
+    href: '/layout',
+    icon: 'font',
+    label: 'Layout',
+  },
+];
+---
+
+<nav id="nav-bar">
+  {
+    rail.map((item) => {
+      const isActive = currentPath === item.href;
+      return (
+        <a href={item.href}>
+          <cn-navigation-icon
+            !active = {isActive}
+            noun={item.icon}
+            label={item.label}
+            checked={currentPath === item.href}
+          />
+        </a>
+      );
+    })
+  }
+</nav>

@@ -1,6 +1,4 @@
 {
-	"extends": "astro/tsconfigs/strictest",
-	"exclude": [
-	  "cyan-next/**/*",
-	]
+  "extends": "astro/tsconfigs/strictest",
+  "exclude": ["cyan-next/**/*"]
 }

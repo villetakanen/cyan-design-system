@@ -1,11 +1,16 @@
 ---
-import BaseHead from "../components/server/BaseHead.astro";
+import InstallationArticle from '../components/docs/InstallationArticle.md';
+import IntroArticle from '../components/docs/IntroArticle.md';
+import Page from '../layouts/Page.astro';
 ---
 
-<html lang="en">
-	<BaseHead title="Cyan Design System v2" />
-	<body>
-		<h1>Astro</h1>
-		<cn-icon noun="fox" />
-	</body>
-</html>
+<Page>
+  <div class="content-columns">
+	<article class="column-l">
+      <IntroArticle />
+	</article>
+	<article>
+      <InstallationArticle />
+	</article>
+  </div>
+</Page>
