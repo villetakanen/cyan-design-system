@@ -13,7 +13,10 @@ importers:
         version: 0.7.0(typescript@5.4.5)
       astro:
         specifier: ^4.10.1
-        version: 4.10.1(@types/node@20.14.2)(typescript@5.4.5)
+        version: 4.10.1(@types/node@20.14.2)(sass@1.77.4)(typescript@5.4.5)
+      lit:
+        specifier: ^3.1.4
+        version: 3.1.4
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -30,6 +33,9 @@ importers:
       lefthook:
         specifier: ^1.6.15
         version: 1.6.15
+      sass:
+        specifier: ^1.77.4
+        version: 1.77.4
 
 packages:
 
@@ -735,6 +741,12 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
+  '@lit-labs/ssr-dom-shim@1.2.0':
+    resolution: {integrity: sha512-yWJKmpGE6lUURKAaIltoPIE/wrbY3TEkqQt+X0m+7fQNnAv0keydnYvbiJFP1PnMhizmIWRWOG5KLhYyc/xl+g==}
+
+  '@lit/reactive-element@2.0.4':
+    resolution: {integrity: sha512-GFn91inaUa2oHLak8awSIigYz0cU0Payr1rcFsrkf5OJ5eSPxElyZfKh0f2p9FsTiZWXQdWGJeXZICEfXXYSXQ==}
+
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
@@ -868,6 +880,9 @@ packages:
 
   '@types/node@20.14.2':
     resolution: {integrity: sha512-xyu6WAMVwv6AKFLB+e/7ySZVr/0zLCzOa7rSpq6jNwpqOrUbcACDWC+53d4n2QHOnDou0fbIsg8wZu/sxrnI4Q==}
+
+  '@types/trusted-types@2.0.7':
+    resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
 
   '@types/unist@2.0.10':
     resolution: {integrity: sha512-IfYcSBWE3hLpBg8+X2SEa8LVkJdJEkT2Ese2aaLs3ptGdVtABxndrMaxuFlQ1qdFf9Q5rDvDpxI3WwgvKFAsQA==}
@@ -1389,6 +1404,9 @@ packages:
     resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
     engines: {node: '>=16.17.0'}
 
+  immutable@4.3.6:
+    resolution: {integrity: sha512-Ju0+lEMyzMVZarkTn/gqRpdqd5dOPaz1mCZ0SH3JV6iFw81PldE/PEB1hWVEA288HPt4WXW8O7AWxB10M+03QQ==}
+
   import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -1578,6 +1596,15 @@ packages:
 
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
+
+  lit-element@4.0.6:
+    resolution: {integrity: sha512-U4sdJ3CSQip7sLGZ/uJskO5hGiqtlpxndsLr6mt3IQIjheg93UKYeGQjWMRql1s/cXNOaRrCzC2FQwjIwSUqkg==}
+
+  lit-html@3.1.4:
+    resolution: {integrity: sha512-yKKO2uVv7zYFHlWMfZmqc+4hkmSbFp8jgjdZY9vvR9jr4J8fH6FUMXhr+ljfELgmjpvlF7Z1SJ5n5/Jeqtc9YA==}
+
+  lit@3.1.4:
+    resolution: {integrity: sha512-q6qKnKXHy2g1kjBaNfcoLlgbI3+aSOZ9Q4tiGa9bGYXq5RBXxkVTqTIVmP2VWMp29L4GyvCFm8ZQ2o56eUAMyA==}
 
   load-yaml-file@0.2.0:
     resolution: {integrity: sha512-OfCBkGEw4nN6JLtgRidPX6QxjBQGQf72q3si2uvqyFEMbycSFFHwAZeXx6cJgFM9wmLrf9zBwCP3Ivqa+LLZPw==}
@@ -2030,6 +2057,11 @@ packages:
 
   run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
+
+  sass@1.77.4:
+    resolution: {integrity: sha512-vcF3Ckow6g939GMA4PeU7b2K/9FALXk2KF9J87txdHzXbUF9XRQRwSxcAs/fGaTnJeBFd7UoV22j3lzMLdM0Pw==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
 
   section-matter@1.0.0:
     resolution: {integrity: sha512-vfD3pmTzGpufjScBh50YHKzEu2lxBWhVEHsNGoEXmCmn2hKGfeNLYMzCJpe8cD7gqX7TJluOVpBkAequ6dgMmA==}
@@ -3095,6 +3127,12 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
 
+  '@lit-labs/ssr-dom-shim@1.2.0': {}
+
+  '@lit/reactive-element@2.0.4':
+    dependencies:
+      '@lit-labs/ssr-dom-shim': 1.2.0
+
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -3207,6 +3245,8 @@ snapshots:
   '@types/node@20.14.2':
     dependencies:
       undici-types: 5.26.5
+
+  '@types/trusted-types@2.0.7': {}
 
   '@types/unist@2.0.10': {}
 
@@ -3325,7 +3365,7 @@ snapshots:
 
   array-iterate@2.0.1: {}
 
-  astro@4.10.1(@types/node@20.14.2)(typescript@5.4.5):
+  astro@4.10.1(@types/node@20.14.2)(sass@1.77.4)(typescript@5.4.5):
     dependencies:
       '@astrojs/compiler': 2.8.0
       '@astrojs/internal-helpers': 0.4.0
@@ -3384,8 +3424,8 @@ snapshots:
       tsconfck: 3.1.0(typescript@5.4.5)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.2.13(@types/node@20.14.2)
-      vitefu: 0.2.5(vite@5.2.13(@types/node@20.14.2))
+      vite: 5.2.13(@types/node@20.14.2)(sass@1.77.4)
+      vitefu: 0.2.5(vite@5.2.13(@types/node@20.14.2)(sass@1.77.4))
       which-pm: 2.2.0
       yargs-parser: 21.1.1
       zod: 3.23.8
@@ -3890,6 +3930,8 @@ snapshots:
 
   human-signals@5.0.0: {}
 
+  immutable@4.3.6: {}
+
   import-fresh@3.3.0:
     dependencies:
       parent-module: 1.0.1
@@ -4021,6 +4063,22 @@ snapshots:
       lefthook-windows-x64: 1.6.15
 
   lines-and-columns@1.2.4: {}
+
+  lit-element@4.0.6:
+    dependencies:
+      '@lit-labs/ssr-dom-shim': 1.2.0
+      '@lit/reactive-element': 2.0.4
+      lit-html: 3.1.4
+
+  lit-html@3.1.4:
+    dependencies:
+      '@types/trusted-types': 2.0.7
+
+  lit@3.1.4:
+    dependencies:
+      '@lit/reactive-element': 2.0.4
+      lit-element: 4.0.6
+      lit-html: 3.1.4
 
   load-yaml-file@0.2.0:
     dependencies:
@@ -4696,6 +4754,12 @@ snapshots:
     dependencies:
       queue-microtask: 1.2.3
 
+  sass@1.77.4:
+    dependencies:
+      chokidar: 3.6.0
+      immutable: 4.3.6
+      source-map-js: 1.2.0
+
   section-matter@1.0.0:
     dependencies:
       extend-shallow: 2.0.1
@@ -4962,7 +5026,7 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite@5.2.13(@types/node@20.14.2):
+  vite@5.2.13(@types/node@20.14.2)(sass@1.77.4):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
@@ -4970,10 +5034,11 @@ snapshots:
     optionalDependencies:
       '@types/node': 20.14.2
       fsevents: 2.3.3
+      sass: 1.77.4
 
-  vitefu@0.2.5(vite@5.2.13(@types/node@20.14.2)):
+  vitefu@0.2.5(vite@5.2.13(@types/node@20.14.2)(sass@1.77.4)):
     optionalDependencies:
-      vite: 5.2.13(@types/node@20.14.2)
+      vite: 5.2.13(@types/node@20.14.2)(sass@1.77.4)
 
   volar-service-css@0.0.45(@volar/language-service@2.2.5):
     dependencies:
