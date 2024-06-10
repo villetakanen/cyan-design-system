@@ -8,7 +8,10 @@ noun: 'filter'
 
 ## Demo
 
-<cn-toggle-button />
+<div>
+  <cn-toggle-button label="off"></cn-toggle-button>
+  <cn-toggle-button label="on" pressed="true"></cn-toggle-button>
+</div>
 
 ## Design tokens
 
@@ -18,4 +21,3 @@ noun: 'filter'
 | `--cn-background-toggle-button-on` | `#0078d4` |
 | `--cn-background-toggle-button-knob-off` | `#ffffff` |
 | `--cn-background-toggle-button-knob-on` | `#ffffff` |
-
