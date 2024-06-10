@@ -1,0 +1,16 @@
+---
+const { color } = Astro.props;
+---
+<div class="color-card-label flex">
+  <div class="label-text flex-grow text-ui">{color}</div>
+  <cn-icon noun="share" xsmall class="hoverable clickable"/>
+</div>
+
+<style lang="css">
+.color-card-label {
+  /* padding: var(--cn-grid); */
+  align-items: center;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+</style>

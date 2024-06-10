@@ -1,0 +1,24 @@
+---
+import Page from '@layouts/Page.astro';
+import { getCollection } from 'astro:content';
+import { logDebug } from 'cyan-next/src/utils/logHelpers';
+const allComponents = await getCollection('elements');
+logDebug('found', allComponents.length, 'elements')
+---
+
+<Page>
+  <div class="content-columns">
+    <article class="content-columns">
+	<h1>Web Components</h1>
+    <p>We have {allComponents.length} web components.</p>
+    {allComponents.map(p => (
+        <p>
+          <a href={'/elements/'+p.slug}>
+            {p.data.noun ? <cn-icon noun={p.data.noun} xsmall /> : ''}
+            {p.data.name} <br>
+            <code>{p.data.nodename}</code></a>
+        </p>
+      ))}
+    </article>
+  </div>
+</Page>

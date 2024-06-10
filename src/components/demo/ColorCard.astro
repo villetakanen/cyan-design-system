@@ -1,0 +1,38 @@
+---
+const { color, title } = Astro.props;
+---
+<div class="color-card">
+  <div class="color-card__demo" style=`background-color:${color}`>
+  </div>
+  <div class="color-card__content">
+    <h4 class="text-body downscaled">{title}</h4>
+    <slot/>
+  </div>
+</div>
+
+<style lang="css">
+.color-card {
+  --demo-size: 11;
+  display: block;
+  border: solid 2px var(--color-on-primary);
+  width: calc(var(--cn-line) * var(--demo-size));
+  font-family: var(--cn-font-family-ui); 
+}
+.color-card__demo {
+  height: calc(var(--cn-line) * var(--demo-size) - 2px);
+  width: calc(var(--cn-line) * var(--demo-size)  - 4px);
+}
+.color-card__content {
+  min-height: var(--cn-line);
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  border-top: solid 2px var(--color-on-primary);
+  padding: var(--cn-grid);
+}
+.text-body {
+  color: var(--color-heading-1);
+  
+  font-weight: 600;
+  margin: 0;
+}
+</style>

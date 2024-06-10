@@ -1,0 +1,48 @@
+---
+type Color = {
+  title: string;
+  color: string;
+};
+
+interface Props {
+  palette: Array<Color>;
+}
+const { palette } = Astro.props;
+---
+<section class="flex flex-row palette-demo">
+{ palette.map((color) => (
+  <div style={`background-color: ${color.color};`} class="demo-block">
+    <span class="px-1">{ color.title }</span>
+  </div>
+))}
+</section>
+<style lang="css">
+.palette-demo {
+  margin: var(--cn-line) 0;
+  --demo-size: 6;
+  border: solid 2px var(--color-on-primary);
+  font-family: var(--cn-font-family-ui);
+  gap: 0
+}
+.demo-block {
+  height: calc(var(--cn-grid) * var(--demo-size));
+  line-height: calc(var(--cn-grid) * var(--demo-size));
+  text-align: center;
+  flex-grow: 1;
+  position: relative;
+}
+.demo-block span {
+  color: var(--color-primary);
+  font-size: var(--cn-font-size-2);
+  font-weight: bold;
+  background-color: var(--color-on-primary);
+  position: absolute;
+  bottom: calc(var(--cn-grid) * -1.5);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: var(--cn-border-radius);
+  height: var(--cn-line);
+  line-height: var(--cn-line);
+
+}
+</style>
