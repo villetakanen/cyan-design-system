@@ -4,8 +4,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-        "@layouts/*": ["src/layouts/*"],
-        "@demo/*": ["src/components/demo/*"]
-    },
+      "@layouts/*": ["src/layouts/*"],
+      "@demo/*": ["src/components/demo/*"]
+    }
   }
 }

@@ -1,10 +1,10 @@
-import { z, defineCollection } from 'astro:content';
+import { defineCollection, z } from 'astro:content';
 
 export const elements = defineCollection({
-    type: 'content',
-    schema: z.object({
-      name: z.string(),
-      nodename: z.string(),
-      noun: z.string().optional(),
-    }),
-  });
+  type: 'content',
+  schema: z.object({
+    name: z.string(),
+    nodename: z.string(),
+    noun: z.string().optional(),
+  }),
+});

@@ -19,6 +19,11 @@
     }
   },
   "files": {
-    "ignore": ["cyan-next/**/*", "node_modules/**/*", "dist/**/*"]
+    "ignore": [
+      "cyan-next/**/*",
+      "node_modules/**/*",
+      "dist/**/*",
+      ".astro/**/*"
+    ]
   }
 }

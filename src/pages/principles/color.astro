@@ -4,172 +4,169 @@ import CnColorCardLabel from '@demo/ColorCardLabel.astro';
 import CnColorPaletteDemo from '@demo/ColorPaletteDemo.astro';
 import Page from '@layouts/Page.astro';
 
-
 const chroma_primary = [
- {
+  {
     color: 'var(--chroma-primary-10)',
     title: '10',
- },
-    {
-        color: 'var(--chroma-primary-20)',
-        title: '20',
-    },
-    {
-        color: 'var(--chroma-primary-30)',
-        title: '30',
-    },
-    {
-        color: 'var(--chroma-primary-40)',
-        title: '40',
-    },
-    {
-        color: 'var(--chroma-primary-50)',
-        title: '50',
-    },
-    {
-        color: 'var(--chroma-primary-60)',
-        title: '60',
-    },
-    {
-        color: 'var(--chroma-primary-70)',
-        title: '70',
-    },
-    {
-        color: 'var(--chroma-primary-80)',
-        title: '80',
-    },
-    {
-        color: 'var(--chroma-primary-90)',
-        title: '90',
-    },
-    {
-        color: 'var(--chroma-primary-95)',
-        title: '95',
-    },
-    {
-        color: 'var(--chroma-primary-99)',
-        title: '99',
-    },   
-]
+  },
+  {
+    color: 'var(--chroma-primary-20)',
+    title: '20',
+  },
+  {
+    color: 'var(--chroma-primary-30)',
+    title: '30',
+  },
+  {
+    color: 'var(--chroma-primary-40)',
+    title: '40',
+  },
+  {
+    color: 'var(--chroma-primary-50)',
+    title: '50',
+  },
+  {
+    color: 'var(--chroma-primary-60)',
+    title: '60',
+  },
+  {
+    color: 'var(--chroma-primary-70)',
+    title: '70',
+  },
+  {
+    color: 'var(--chroma-primary-80)',
+    title: '80',
+  },
+  {
+    color: 'var(--chroma-primary-90)',
+    title: '90',
+  },
+  {
+    color: 'var(--chroma-primary-95)',
+    title: '95',
+  },
+  {
+    color: 'var(--chroma-primary-99)',
+    title: '99',
+  },
+];
 
 const chroma_surface = [
-    {
-        color: 'var(--chroma-surface-10)',
-        title: '10',
-    },
-    {
-        color: 'var(--chroma-surface-20)',
-        title: '20',
-    },
-    {
-        color: 'var(--chroma-surface-30)',
-        title: '30',
-    },
-    {
-        color: 'var(--chroma-surface-40)',
-        title: '40',
-    },
-    {
-        color: 'var(--chroma-surface-50)',
-        title: '50',
-    },
-    {
-        color: 'var(--chroma-surface-60)',
-        title: '60',
-    },
-    {
-        color: 'var(--chroma-surface-70)',
-        title: '70',
-    },
-    {
-        color: 'var(--chroma-surface-80)',
-        title: '80',
-    },
-    {
-        color: 'var(--chroma-surface-90)',
-        title: '90',
-    },
-    {
-        color: 'var(--chroma-surface-95)',
-        title: '95',
-    },
-    {
-        color: 'var(--chroma-surface-99)',
-        title: '99',
-    }
-]
+  {
+    color: 'var(--chroma-surface-10)',
+    title: '10',
+  },
+  {
+    color: 'var(--chroma-surface-20)',
+    title: '20',
+  },
+  {
+    color: 'var(--chroma-surface-30)',
+    title: '30',
+  },
+  {
+    color: 'var(--chroma-surface-40)',
+    title: '40',
+  },
+  {
+    color: 'var(--chroma-surface-50)',
+    title: '50',
+  },
+  {
+    color: 'var(--chroma-surface-60)',
+    title: '60',
+  },
+  {
+    color: 'var(--chroma-surface-70)',
+    title: '70',
+  },
+  {
+    color: 'var(--chroma-surface-80)',
+    title: '80',
+  },
+  {
+    color: 'var(--chroma-surface-90)',
+    title: '90',
+  },
+  {
+    color: 'var(--chroma-surface-95)',
+    title: '95',
+  },
+  {
+    color: 'var(--chroma-surface-99)',
+    title: '99',
+  },
+];
 
 const chroma_key = [
-    {
-        color: 'var(--chroma-key-10)',
-        title: '10',
-    },
-    {
-        color: 'var(--chroma-key-20)',
-        title: '20',
-    },
-    {
-        color: 'var(--chroma-key-30)',
-        title: '30',
-    },
-    {
-        color: 'var(--chroma-key-40)',
-        title: '40',
-    },
-    {
-        color: 'var(--chroma-key-50)',
-        title: '50',
-    },
-    {
-        color: 'var(--chroma-key-60)',
-        title: '60',
-    },
-    {
-        color: 'var(--chroma-key-70)',
-        title: '70',
-    },
-    {
-        color: 'var(--chroma-key-80)',
-        title: '80',
-    },
-    {
-        color: 'var(--chroma-key-90)',
-        title: '90',
-    },
-    {
-        color: 'var(--chroma-key-95)',
-        title: '95',
-    },
-    {
-        color: 'var(--chroma-key-99)',
-        title: '99',
-    }
-]
-
+  {
+    color: 'var(--chroma-key-10)',
+    title: '10',
+  },
+  {
+    color: 'var(--chroma-key-20)',
+    title: '20',
+  },
+  {
+    color: 'var(--chroma-key-30)',
+    title: '30',
+  },
+  {
+    color: 'var(--chroma-key-40)',
+    title: '40',
+  },
+  {
+    color: 'var(--chroma-key-50)',
+    title: '50',
+  },
+  {
+    color: 'var(--chroma-key-60)',
+    title: '60',
+  },
+  {
+    color: 'var(--chroma-key-70)',
+    title: '70',
+  },
+  {
+    color: 'var(--chroma-key-80)',
+    title: '80',
+  },
+  {
+    color: 'var(--chroma-key-90)',
+    title: '90',
+  },
+  {
+    color: 'var(--chroma-key-95)',
+    title: '95',
+  },
+  {
+    color: 'var(--chroma-key-99)',
+    title: '99',
+  },
+];
 
 const primary_palette = [
   {
     color: 'var(--chroma-S-K)',
-    title: 'S/K'
+    title: 'S/K',
   },
   {
     color: 'var(--chroma-K-S)',
-    title: 'K/S'
+    title: 'K/S',
   },
   {
     color: 'var(--chroma-C)',
-    title: 'C'
+    title: 'C',
   },
   {
     color: 'var(--chroma-N)',
-    title: 'N'
+    title: 'N',
   },
   {
     color: 'var(--chroma-A)',
-    title: 'A'
-  }
-]
-
+    title: 'A',
+  },
+];
 ---
 
 <Page title="Color" noun="palette">
