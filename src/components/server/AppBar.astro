@@ -1,13 +1,17 @@
 ---
-const { title, noun, tray } = Astro.props;
+const { title, noun, tray, showTray } = Astro.props;
 
 const pageTitle = title || 'Cyan Design System [NEXT]';
 ---
 <header class="cn-app-bar appBar">
-  { tray && <cn-tray-button></cn-tray-button> }
+  { tray && <cn-tray-button
+    ariaexpanded={showTray ? "true" : "false"}
+  ></cn-tray-button> }
   <h3>
     { noun && <cn-icon noun={noun} style="margin-right: 8px"></cn-icon> }
     { pageTitle }</h3>
+
+  ({showTray})
   <slot></slot>
   <div style="flex: 1"></div>
   <cn-lightmode-button></cn-lightmode-button>

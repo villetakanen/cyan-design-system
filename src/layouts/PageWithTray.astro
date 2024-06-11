@@ -1,0 +1,22 @@
+---
+import AppBar from '../components/server/AppBar.astro';
+import Bar from '../components/server/Bar.astro';
+import BaseHead from '../components/server/BaseHead.astro';
+import Rail from '../components/server/Rail.astro';
+
+const { title, noun, showTray } = Astro.props;
+---
+<html lang="en">
+  <BaseHead title="Cyan Design System v2" />
+  <body>
+    <Rail />
+    <Bar />
+    <nav class="cn-tray">
+      <slot name="tray" />
+   </nav>
+    <AppBar title={title} noun={noun} tray showTray={showTray}/>
+    <main>
+	  <slot></slot>
+    </main>
+  </body>
+</html>
