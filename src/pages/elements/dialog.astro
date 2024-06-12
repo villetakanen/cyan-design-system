@@ -1,0 +1,58 @@
+---
+import PageWithTray from '@layouts/PageWithTray.astro';
+import ComponentsTray from 'src/components/server/ComponentsTray.astro';
+---
+
+<PageWithTray>
+  <ComponentsTray slot="tray" />
+  <div class="content-columns">
+    <article class="column-l">
+      <h1>Dialogs</h1>
+      <button id="demoDialogButton">Open Dialog</button>
+      <h3>Props</h3>
+      <div class="field-grid">
+        <p>
+          <code>title</code>
+        </p>
+        <p>Sets the title of the dialog</p>
+        <p>
+          <code>open</code>
+        </p>
+        <p>Opens the dialog, matches programmatically the dialog state</p>
+        <p>
+          <code>returnValue</code>
+        </p>
+        <p>Matches the html dialog functionality</p>
+      </div>
+      <h3>Functionality</h3>
+        <p>
+            <code>CyanDialog</code>.close() is used to close the dialog. This also sets a <code>CyanDialog</code>.returnValue and dispatches a close Event.
+        </p>
+    </article>
+  </div>
+  
+  <div slot="end-of-body">
+    <cn-dialog 
+      id="demoDialog"
+      title="A Dialog title?"
+      slot="end-of-body"
+      >
+      <h1>Hi!</h1>
+      <p>I'm a dialog?</p>
+      <p>Do you want to close me?</p>
+      
+      <div class="flex toolbar justify-end">
+        <button onclick="document.getElementById('demoDialog').close()">Cancel</button>
+        <button onclick="document.getElementById('demoDialog').close()">Save</button>
+      </div>
+
+  </cn-dialog>
+  <script is:inline>
+    const o = document.getElementById("demoDialogButton");
+    o?.addEventListener("click", e);
+    function e() {
+        document.getElementById("demoDialog").showModal()
+    }
+</script>
+</div>
+</PageWithTray> 

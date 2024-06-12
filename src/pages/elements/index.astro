@@ -4,19 +4,36 @@ import Page from '@layouts/Page.astro';
 import { logDebug } from 'cyan-next/src/utils/logHelpers';
 const allComponents = await getCollection('elements');
 logDebug('found', allComponents.length, 'elements');
+
+const componentDirectory = [
+  ...allComponents.map((p) => ({
+    slug: p.slug,
+    longname: p.data.name,
+    noun: p.data.noun,
+    nodename: p.data.nodename,
+  })),
+  {
+    slug: 'dialog',
+    longname: 'Dialog',
+    noun: 'dialog',
+    nodename: 'cn-dialog',
+  },
+];
+
+logDebug('displaying', componentDirectory, 'elements');
 ---
 
 <Page>
   <div class="content-columns">
     <article class="content-columns">
 	<h1>Web Components</h1>
-    <p>We have {allComponents.length} web components.</p>
-    {allComponents.map(p => (
+    <p>We have {componentDirectory.length} web components.</p>
+    {componentDirectory.map(p => (
         <p>
           <a href={'/elements/'+p.slug}>
-            {p.data.noun ? <cn-icon noun={p.data.noun} xsmall /> : ''}
-            {p.data.name} <br>
-            <code>{p.data.nodename}</code></a>
+            {p.noun ? <cn-icon noun={p.noun} xsmall /> : ''}
+            {p.longname} <br>
+            <code>{p.nodename}</code></a>
         </p>
       ))}
     </article>
