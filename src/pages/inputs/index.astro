@@ -2,23 +2,18 @@
 import { getCollection } from 'astro:content';
 import PageWithTray from '@layouts/PageWithTray.astro';
 import { logDebug } from 'cyan-next/src/utils/logHelpers';
+import InputsListSection from 'src/components/docs/InputsListSection.astro';
 const allComponents = await getCollection('inputs');
 logDebug('found', allComponents.length, 'layout pages');
 ---
 
 <PageWithTray>
+  <InputsListSection slot="tray"/>
   <div class="content-columns">
     <article class="column-l">
-	<h1>App Layout</h1>
-    <p>We have {allComponents.length} pages.</p>
-    {allComponents.map(p => (
-        <p>
-          <a href={'/inputs/'+p.slug}>
-            {p.data.noun ? <cn-icon noun={p.data.noun} xsmall /> : ''}
-            {p.data.name} <br>
-            <code>{p.data.html}</code></a>
-        </p>
-      ))}
+	    <h1>App Layout</h1>
+      <p>We have {allComponents.length} pages.</p>
+      <InputsListSection />
     </article>
   </div>
 </PageWithTray>

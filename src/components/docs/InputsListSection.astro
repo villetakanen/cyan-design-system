@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+
+const allComponents = await getCollection('inputs');
+---
+<h3>Inputs</h3>
+<ul class="list-style-none">
+{ allComponents.map(
+  p => (
+    <li>
+      <a href={`/inputs/${p.slug}`}>
+        {p.data.noun ? 
+          <cn-icon noun={p.data.noun} xsmall></cn-icon> 
+          : ''
+        }
+        {p.data.name} <br>
+        <code>{p.data.html}</code>
+      </a>
+    </li>
+  )
+)}
+</ul>
