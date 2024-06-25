@@ -5,7 +5,8 @@
     "baseUrl": ".",
     "paths": {
       "@layouts/*": ["src/layouts/*"],
-      "@demo/*": ["src/components/demo/*"]
+      "@demo/*": ["src/components/demo/*"],
+      "@cyan/*": ["cyan-next/*"]
     }
   }
 }
