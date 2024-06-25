@@ -26,3 +26,12 @@ export const inputs = defineCollection({
     noun: z.string().optional(),
   }),
 });
+
+export const css = defineCollection({
+  type: 'content',
+  schema: z.object({
+    name: z.string(),
+    class: z.string().optional(),
+    noun: z.string().optional(),
+  }),
+});

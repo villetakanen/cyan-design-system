@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+
+const allComponents = await getCollection('css');
+---
+<h3>VSS</h3>
+<ul class="list-style-none">
+{ allComponents.map(
+  p => (
+    <li>
+      <a href={`/css/${p.slug}`}>
+        {p.data.noun ? 
+          <cn-icon noun={p.data.noun} xsmall></cn-icon> 
+          : ''
+        }
+        {p.data.name} <br>
+        <code>{p.data.html}</code>
+      </a>
+    </li>
+  )
+)}
+</ul>

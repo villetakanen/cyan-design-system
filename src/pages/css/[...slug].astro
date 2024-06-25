@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import PageWithTray from '@layouts/PageWithTray.astro';
+import InputsListSection from 'src/components/docs/InputsListSection.astro';
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const components = await getCollection('css');
+  return components.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+// 2. For your template, you can get the entry directly from the prop
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+<PageWithTray title={entry.data.name} noun={entry.data.noun}>
+  <InputsListSection slot="tray" />
+  <div class="content-columns">
+    <article class="column-l">
+      <Content />
+    </article>
+  </div>
+</PageWithTray>
