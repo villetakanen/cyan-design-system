@@ -23,7 +23,8 @@
       "cyan-next/**/*",
       "node_modules/**/*",
       "dist/**/*",
-      ".astro/**/*"
+      ".astro/**/*",
+      ".vercel/**/*"
     ]
   }
 }
