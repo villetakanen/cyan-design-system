@@ -1,0 +1,38 @@
+---
+name: "Avatar actions"
+nodename: 'cn-avatar-button'
+noun: 'avatar'
+---
+
+# Avatar actios
+
+[`cn-avatar-button`](/elements/cn-avatar-button), is intended to be used in conjunction with [`cn-avatar`](/elements/cn-avatar) to create a clickable avatar that can be used to trigger actions, like changing the user's profile picture.
+
+## Demo
+
+import AvatarActionsPopup from '../../components/demo/AvatarActionsPopup.astro'
+
+<AvatarActionsPopup />
+
+```html
+<cn-avatar-button
+  popovertarget="popover-demo" >
+</cn-avatar-button>
+
+<div
+  id="popover-demo"
+  popover>
+  <nav class="flex flex-column p-1 elevation-4">
+    <a href="#" class="p-1 hoverable">Profile</a>
+    <a href="#" class="p-1 hoverable">Settings</a>
+    <a href="#" class="p-1 hoverable">Logout</a>
+  </nav>
+</div>
+
+<script is:inline>
+document.querySelector('#popover-demo').addEventListener('click', function(e) {
+  e.stopPropagation()
+  document.querySelector('#popover-demo')?.togglePopover()
+})
+</script>
+```

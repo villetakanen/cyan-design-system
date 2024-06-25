@@ -1,0 +1,26 @@
+<cn-avatar-button
+  popovertarget="popover-demo"
+  src="/mountains.jpg">
+</cn-avatar-button>
+
+<div
+  id="popover-demo"
+  class="p-1 elevation-4"
+  popover>
+  <nav class="menu">
+    <a href="#" class="p-1 hoverable">Profile</a>
+    <a href="#" class="p-1 hoverable">Settings</a>
+    <a href="#" class="p-1 hoverable">Logout</a>
+  </nav>
+</div>
+
+<script is:inline>
+document.querySelector('#popover-demo').addEventListener('click', function(e) {
+  e.stopPropagation()
+  document.querySelector('#popover-demo')?.togglePopover()
+})
+</script>
+
+
+
+
