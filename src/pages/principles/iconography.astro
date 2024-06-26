@@ -1,0 +1,44 @@
+---
+import PageWithTray from "@layouts/PageWithTray.astro";
+
+const iconsFiles = await Astro.glob("/public/icons/*.svg")
+
+// the file src looks something like "/@fs/Users/vtak/Dev/cyan-design-system/public/icons/add.svg"
+// We want to take just the name, like "add"
+const icons = iconsFiles.map(file => {
+    if(!file.default.src) return
+    const parts = file.default.src.split("/")
+    const filename = parts[parts.length - 1]
+    const noun = filename.split(".")[0]
+    return noun
+})
+
+---
+
+<PageWithTray>
+  <main class="content-columns">
+    <article class="column-l">
+      <h1>Iconography</h1>
+      <div class="flex" id="demo-section">
+      {icons.map(noun => (
+        <figure>
+        <cn-icon noun={noun}></cn-icon>
+        <figcaption>{noun}</figcaption>
+    </figure>
+        ))}
+      </div>
+      <button id="theme-dark">Dark-theme</button>
+      <button id="theme-light">Light-theme</button>
+    </article>
+    <script is:inline>
+      document.getElementById("theme-dark").addEventListener("click", () => {
+        document.getElementById("demo-section").classList.add("dark")
+        document.getElementById("demo-section").classList.remove("light")
+      })
+        document.getElementById("theme-light").addEventListener("click", () => {
+            document.getElementById("demo-section").classList.remove("dark")
+            document.getElementById("demo-section").classList.add("light")
+        })
+    </script>
+  </main>
+</PageWithTray>
