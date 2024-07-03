@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import PageWithTray from '@layouts/PageWithTray.astro';
 import { logDebug } from 'cyan-next/src/utils/logHelpers';
 import InputsListSection from 'src/components/docs/InputsListSection.astro';
+import ExampleInputsSection from '@demo/ExampleInputsSection.astro';
 const allComponents = await getCollection('inputs');
 logDebug('found', allComponents.length, 'layout pages');
 ---
@@ -12,6 +13,9 @@ logDebug('found', allComponents.length, 'layout pages');
   <div class="content-columns">
     <article class="column-l">
 	    <h1>App Layout</h1>
+      <ExampleInputsSection />
+    </article>
+    <article>
       <p>We have {allComponents.length} pages.</p>
       <InputsListSection />
     </article>
