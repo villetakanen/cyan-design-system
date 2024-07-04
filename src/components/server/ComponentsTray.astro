@@ -2,16 +2,39 @@
 import { getCollection } from 'astro:content';
 
 const allComponents = await getCollection('elements');
+
+const componentDirectory = [
+  ...allComponents.map((p) => ({
+    slug: p.slug,
+    longname: p.data.name,
+    noun: p.data.noun,
+    nodename: p.data.nodename,
+  })),
+  {
+    slug: 'dialog',
+    longname: 'Dialog',
+    noun: 'layout',
+    nodename: 'cn-dialog',
+  },
+  {
+    slug: 'snackbar',
+    longname: 'Snackbar',
+    noun: 'layout',
+    nodename: 'cn-snackbar',
+  }
+]
 ---
 
 <h3 class="cn-tray-title">Web Components</h3>
 <ul>
   {
-    allComponents.map(p => (
+    componentDirectory.map(p => (
       <li>
         <a href={'/docs/fi/' + p.slug}>
-          {p.data.noun && <cn-icon noun={p.data.noun} small></cn-icon>}
-          {p.data.shortname || p.data.name}</a>
+          {p.noun && <cn-icon noun={p.noun} small></cn-icon>}
+          {p.longname} <br>
+          <code>{p.nodename}</code>
+          </a>
       </li>
     ))
   }

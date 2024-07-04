@@ -1,0 +1,40 @@
+---
+import PageWithTray from '@layouts/PageWithTray.astro';
+import ComponentsTray from 'src/components/server/ComponentsTray.astro';
+import SnackbarCode from 'src/components/docs/snackbarCode.md';
+---
+<PageWithTray>
+  <ComponentsTray slot="tray" />
+    <div class="content-columns">
+      <article class="column-l">
+        <h1>Snackbar</h1>
+        <input type="text" id="demoSnackbarInput" placeholder="Enter a message" />
+        <button id="demoSnackbarButton">Push to snackbar</button>
+        <SnackbarCode />
+      </article>
+    </div>
+    <script is:inline lang="typescript">
+      /*const snackbar = document.querySelector('cn-snackbar');
+      console.log('snackbar', snackbar);
+      if (snackbar) {
+        document.getElementById('demoSnackbarButton').addEventListener('click', () => {
+          const message = document.getElementById('demoSnackbarInput').value;
+          snackbar.push(message);
+        });
+      }*/
+
+      document.getElementById('demoSnackbarButton').addEventListener('click', () => {
+
+        const event = new CustomEvent('cn-snackbar-add', {
+          detail: {
+            message: document.getElementById('demoSnackbarInput').value || 'Hello, world!',
+          },
+        });
+
+        window.dispatchEvent(event);
+
+        console.log('event fired');
+      });
+    
+    </script>
+</PageWithTray>
