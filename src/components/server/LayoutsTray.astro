@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+const collection = await getCollection('layout');
+
+type CollectionItem = {
+  slug: string;
+  data: {
+    name: string;
+    noun?: string;
+  };
+};
+
+const allComponents: CollectionItem[] = collection.map((page) => ({
+  slug: page.slug,
+  data: {
+    name: `${page.data.name}`,
+    noun: `${page.data.noun}`,
+  },
+}));
+
+allComponents.push({
+  slug: 'content-columns',
+  data: {
+    name: 'Content columns',
+    noun: 'layout',
+  }
+}, {slug: 'editor-layout',
+  data: {
+    name: 'Editor layout',
+    noun: 'edit',
+  }});
+
+---
+<p>{allComponents.length} pages.</p>
+
+{allComponents.map(p => (
+    <p>
+      <a href={'/layout/'+p.slug}>
+        {p.data.noun ? <cn-icon noun={p.data.noun} xsmall /> : ''}
+        {p.data.name}
+      </a>
+    </p>
+  ))}

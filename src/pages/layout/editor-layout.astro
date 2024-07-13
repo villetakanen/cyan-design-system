@@ -1,0 +1,22 @@
+---
+import PageWithTray from "@layouts/PageWithTray.astro";
+import LayoutsTray from "src/components/server/LayoutsTray.astro";
+
+---
+<PageWithTray>
+  <LayoutsTray slot="tray" />
+  <div class="content-editor">
+    <div class="toolbar debug">
+      <button type="button">
+        <cn-icon noun="edit"></cn-icon>
+      </button>
+    </div>
+    <textarea>...</textarea>
+    <div class="toolbar debug justify-end">
+        <button type="button">
+          <cn-icon noun="save"/>
+          <span>Save</span>
+        </button>
+      </div>
+  </div>
+</PageWithTray>

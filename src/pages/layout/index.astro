@@ -1,48 +1,18 @@
 ---
-import { getCollection } from 'astro:content';
-import PageWithTray from '@layouts/PageWithTray.astro';
-const collection = await getCollection('layout');
-
-type CollectionItem = {
-  slug: string;
-  data: {
-    name: string;
-    noun?: string;
-  };
-};
-
-const allComponents: CollectionItem[] = collection.map((page) => ({
-  slug: page.slug,
-  data: {
-    name: `${page.data.name}`,
-    noun: `${page.data.noun}`,
-  },
-}));
-
-allComponents.push({
-  slug: 'content-columns',
-  data: {
-    name: 'Content columns',
-    noun: 'layout',
-  },
-});
+import PageWithTray from "@layouts/PageWithTray.astro";
+import LayoutsTray from "src/components/server/LayoutsTray.astro";
 ---
 
 <PageWithTray>
+  <LayoutsTray slot="tray" />
   <div class="content-columns">
     <article class="column-l">
 	<h1>
     <cn-icon noun="layout" large></cn-icon>
     App Layout</h1>
-    <p>We have {allComponents.length} pages.</p>
-    {allComponents.map(p => (
-        <p>
-          <a href={'/layout/'+p.slug}>
-            {p.data.noun ? <cn-icon noun={p.data.noun} xsmall /> : ''}
-            {p.data.name}
-          </a>
-        </p>
-      ))}
+    
+    <LayoutsTray />
+    
     </article>
   </div>
 </PageWithTray>
