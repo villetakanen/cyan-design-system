@@ -23,6 +23,7 @@ const { title, noun, showTray } = Astro.props;
 	  <slot></slot>
     </main>
     <BaseTail />
+    <slot name="fab-tray"></slot>
     <slot name="end-of-body"></slot>
   </body>
 </html>

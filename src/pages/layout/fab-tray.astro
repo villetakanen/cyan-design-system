@@ -1,0 +1,29 @@
+---
+import PageWithTray from "@layouts/PageWithTray.astro";
+import LayoutsTray from "src/components/server/LayoutsTray.astro";
+
+---
+<PageWithTray>
+  <LayoutsTray slot="tray" />
+  <div class="content-columns">
+    <article class="column-l">
+      <h1>FAB tray</h1>
+      <section>
+        <h4>Examples</h4>
+        <div class="grid two-cols">
+          <button class="fab">Button .fab</button>
+          <a href="#" class="fab">Link .fab</a>
+        </div>
+      </section>
+    </article>
+  </div>
+  <nav slot="fab-tray" id="fab-tray">
+    <a href="#" class="fab secondary small">Small secondary</a>
+    <a href="#" class="fab small">Small</a>
+    <a href="#" class="fab secondary">Secondary</a>
+    <a href="#" class="fab">
+      <cn-icon noun="fox"></cn-icon>
+      <span>Primary</span>
+    </a>
+  </nav>
+</PageWithTray>
