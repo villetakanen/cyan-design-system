@@ -11,7 +11,7 @@ const { palette } = Astro.props;
 ---
 <section class="flex flex-row palette-demo">
 { palette.map((color) => (
-  <div style={`background-color: ${color.color};`} class="demo-block">
+  <div style={`background: ${color.color};`} class="demo-block">
     <span class="px-1">{ color.title }</span>
   </div>
 ))}

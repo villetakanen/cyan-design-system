@@ -1,0 +1,54 @@
+---
+import ColorPaletteDemo from '@demo/ColorPaletteDemo.astro';
+import Page from '@layouts/Page.astro';
+---
+
+<Page>
+  <div class="content-columns">
+    <article class="column-l">
+      <h1>Theming</h1>
+      <h2>Primary palette</h2>
+
+      <div class="force-dark elevation-1 p-1 border-radius mb-1">
+      <p>dark, .force-dark</p>
+      <ColorPaletteDemo palette={[
+        { title: 'PRI', color: 'var(--color-primary)' },
+        { title: 'ON_PRI', color: 'var(--color-on-primary)' },
+        { title: 'SEC', color: 'var(--color-secondary)' },
+        { title: 'ON_SEC', color: 'var(--color-on-secondary)' },
+        { title: 'NOT', color: 'var(--color-notify)' },
+        { title: 'AL!', color: 'var(--color-alert)'}
+      ]} />
+      </div>
+
+
+      <div class="force-light elevation-1 p-1 border-radius">
+        <p>light, .force-light</p>
+        <ColorPaletteDemo palette={[
+          { title: 'PRI', color: 'var(--color-primary)' },
+          { title: 'ON_PRI', color: 'var(--color-on-primary)' },
+          { title: 'SEC', color: 'var(--color-secondary)' },
+          { title: 'ON_SEC', color: 'var(--color-on-secondary)' },
+          { title: 'NOT', color: 'var(--color-notify)' },
+          { title: 'AL!', color: 'var(--color-alert)'}
+        ]} />
+        </div>
+      
+
+      <h2>Base elements</h2>
+      <h3>Buttons</h3>
+      <ColorPaletteDemo palette={[
+        { title: 'BTN', color: 'var(--background-button)' },
+        { title: 'HOVER', color: 'var(--background-button-hover)' },
+        { title: 'ACT', color: 'var(--background-button-active)' },
+        { title: 'DIS', color: 'var(--background-button-disabled)' },
+      ]} />
+        <ColorPaletteDemo palette={[
+        { title: 'TEXT', color: 'var(--background-button-text)' },
+        { title: 'HOVER', color: 'var(--background-button-text-hover)' },
+        { title: 'ACT', color: 'var(--background-button-text-active)' },
+        { title: 'DIS', color: 'var(--background-button-text-disabled)' },
+      ]} />
+    </article>
+  </div>
+</Page>

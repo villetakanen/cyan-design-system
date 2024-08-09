@@ -1,0 +1,21 @@
+---
+const { background, foreground } = Astro.props;
+---
+<div class="color-var-block"
+    style={`--color-background: ${background}; --color-foreground: ${foreground};`}
+>
+  <slot></slot> 
+</div>
+
+<style lang="css">
+.color-var-block {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  padding: var(--cn-line);
+  border-radius: var(--cn-border-radius);
+  margin: var(--cn-line) 0;
+  font-family: var(--cn-font-family-ui);
+  height: calc(8 * var(--cn-grid));
+  width: calc(8 * var(--cn-grid));
+}
+</style>
