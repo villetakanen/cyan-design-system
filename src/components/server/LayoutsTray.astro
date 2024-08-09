@@ -39,13 +39,14 @@ allComponents.push({
   }});
 
 ---
+<h2>App Layout Comps</h2>
 <p>{allComponents.length} pages.</p>
 
 {allComponents.map(p => (
-    <p>
-      <a href={'/layout/'+p.slug}>
+    <ul>
+      <li><a href={'/layout/'+p.slug}>
         {p.data.noun ? <cn-icon noun={p.data.noun} xsmall /> : ''}
         {p.data.name}
-      </a>
-    </p>
+      </a></li>
+    </ul>
   ))}

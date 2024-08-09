@@ -1,8 +1,10 @@
 ---
 import PageWithTray from '@layouts/PageWithTray.astro';
+import LayoutsTray from 'src/components/server/LayoutsTray.astro';
 ---
 
 <PageWithTray>
+  <LayoutsTray slot="tray" />
     <div class="content-columns">
       <div class="full-width elevation-1 p-2 text-center">
         <h1 class="m-0">Content columns</h1>

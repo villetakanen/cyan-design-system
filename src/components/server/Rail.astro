@@ -52,7 +52,7 @@ const rail: Array<RailItem> = [
       return (
         <a href={item.href}>
           <cn-navigation-icon
-            !active = {isActive}
+            active = {isActive}
             noun={item.icon}
             label={item.label}
             checked={currentPath === item.href}
