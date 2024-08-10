@@ -1,9 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
+import ExampleInputsSection from '@demo/ExampleInputsSection.astro';
 import PageWithTray from '@layouts/PageWithTray.astro';
 import { logDebug } from 'cyan-next/src/utils/logHelpers';
 import InputsListSection from 'src/components/docs/InputsListSection.astro';
-import ExampleInputsSection from '@demo/ExampleInputsSection.astro';
 const allComponents = await getCollection('inputs');
 logDebug('found', allComponents.length, 'layout pages');
 ---

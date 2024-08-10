@@ -18,26 +18,29 @@ const allComponents: CollectionItem[] = collection.map((page) => ({
   },
 }));
 
-allComponents.push({
-  slug: 'content-columns',
-  data: {
-    name: 'Content columns',
-    noun: 'layout',
-  }
-},
-{
-  slug: 'fab-tray',
-  data: {
-    name: 'FAB tray',
-    noun: 'layout'
-  }
-}, 
-{slug: 'editor-layout',
-  data: {
-    name: 'Editor layout',
-    noun: 'edit',
-  }});
-
+allComponents.push(
+  {
+    slug: 'content-columns',
+    data: {
+      name: 'Content columns',
+      noun: 'layout',
+    },
+  },
+  {
+    slug: 'fab-tray',
+    data: {
+      name: 'FAB tray',
+      noun: 'layout',
+    },
+  },
+  {
+    slug: 'editor-layout',
+    data: {
+      name: 'Editor layout',
+      noun: 'edit',
+    },
+  },
+);
 ---
 <h2>App Layout Comps</h2>
 <p>{allComponents.length} pages.</p>

@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
-import { logDebug } from 'cyan-next/src/utils/logHelpers';
 import PageWithTray from '@layouts/PageWithTray.astro';
+import { logDebug } from 'cyan-next/src/utils/logHelpers';
 import ComponentsTray from 'src/components/server/ComponentsTray.astro';
 const allComponents = await getCollection('elements');
 logDebug('found', allComponents.length, 'elements');
@@ -24,7 +24,7 @@ const componentDirectory = [
     longname: 'Snackbar',
     noun: 'layout',
     nodename: 'cn-snackbar',
-  }
+  },
 ];
 
 logDebug('displaying', componentDirectory, 'elements');
