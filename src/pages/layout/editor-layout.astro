@@ -1,22 +1,25 @@
 ---
-import PageWithTray from '@layouts/PageWithTray.astro';
+import ModalPage from '@layouts/ModalPage.astro';
 import LayoutsTray from 'src/components/server/LayoutsTray.astro';
 ---
-<PageWithTray>
+<ModalPage>
   <LayoutsTray slot="tray" />
   <div class="content-editor">
-    <div class="toolbar debug">
+    <div class="toolbar">
       <button type="button">
         <cn-icon noun="edit"></cn-icon>
       </button>
-      <h4>An example of an editor.</h4>
+      <label class="flex-grow">
+        An input in a toolbar
+        <input type="text" placeholder="Title" />
+      </label>
     </div>
     <textarea>...</textarea>
-    <div class="toolbar debug justify-end">
+    <div class="toolbar justify-end">
         <button type="button">
           <cn-icon noun="save"/>
           <span>Save</span>
         </button>
       </div>
   </div>
-</PageWithTray>
+</ModalPage>
