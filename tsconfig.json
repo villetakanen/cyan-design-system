@@ -6,7 +6,8 @@
     "paths": {
       "@layouts/*": ["src/layouts/*"],
       "@demo/*": ["src/components/demo/*"],
-      "@cyan/*": ["cyan-next/*"]
+      "@cyan/*": ["cyan-next/*"],
+      "@components/*": ["src/components/*"]
     }
   }
 }

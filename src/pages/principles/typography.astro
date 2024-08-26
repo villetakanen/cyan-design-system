@@ -1,0 +1,204 @@
+---
+import TextBodyArticle from '@components/typography/TextBodyArticle.astro';
+import PageWithTray from '@layouts/PageWithTray.astro';
+---
+
+<PageWithTray>
+  <div class="content-columns">
+    <TextBodyArticle />
+
+
+    <article class="small Column">
+        <cn-card elevation="1">
+        <div style="border: solid 1px var(--cyan-color-medium); border-radius: 50%; height: 128px; width: 128px;margin: 12px auto 24px auto">
+          <cn-icon noun="font" xlarge />
+        </div>
+        <h2 style="text-align: center" class="TypeHeadline4">Typography</h2>
+        <p style="text-align: center; margin-bottom: 16px" class="lowEmphasis TypeBody2">A longish treatise on typography for the Cyan, Pelilauta, and Mekanismi. </p>
+        <h4>Usage</h4>
+        <p class="lowEmphasis">The following set of Google fonts links are expected to be present at <cyan-code>{'<head>'}</cyan-code></p>
+        <pre class="code">{'<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">'}</pre>
+        </cn-card>
+      </article>
+
+<article class="Column">
+    <h2>h1</h2>
+    <p>The <cyan-code>h1</cyan-code> element and the accompanying class <cyan-code>.TypeheadLine1</cyan-code> are 
+      used to communicate the high-level purpose of a page or an article. Should a view consist of multiple "pages",
+      like a book style layout with multiple chapters with titles, multiple <cyan-code>h1</cyan-code>'s are allowed
+      (though, not recommended).</p>
+    <h3>Desktop and tablet</h3>
+    <section class="withGrid">
+      <h1>H1 abc</h1>
+    </section>
+    <p>The large screen variant for 1st level headings follows google material design suggenstions, for the chosen
+      font (Lato). Should you override the font - please also check the material font tool suggestions for full
+      list of suggested font styles.</p>
+    <h3>Mobile</h3>
+    <section class="withGrid">
+      <h1 class="downscaled">Headline1, downscaled</h1>
+    </section>
+    <p>The downscaled variant of a <cyan-code>h1</cyan-code> uses font styles from material design tool level 3 headings.
+      On mobile screens, the base varian is automatically downscaled, so there should be no difference between the variants.</p>
+    <h3>Cards</h3>
+    <p>A <cyan-code>h1</cyan-code> is never used in a Card.</p>
+  </article>
+
+
+  <article class="Column">
+    <h2>h2</h2>
+    <p>The <cyan-code>h2</cyan-code> element and the accompanying class <cyan-code>.TypeheadLine2</cyan-code> are 
+      used for large headings in a view.</p>
+    <h3>Desktop and tablet</h3>
+    <section class="withGrid">
+      <h2>H2 abc</h2>
+    </section>
+    <p>The large screen variant for 2nd level headings follows google material design suggenstions, for the chosen
+      font (Lato). Should you override the font - please also check the material font tool suggestions for full
+      list of suggested font styles.</p>
+    <h3>Mobile</h3>
+    <section class="withGrid">
+      <h2 class="downscaled">Headline2, downscaled</h2>
+    </section>
+    <p>The downscaled variant of a <cyan-code>h2</cyan-code> uses font styles from material design tool level 4 headings.
+      On mobile screens, the base varian is automatically downscaled, so there should be no difference between the variants.</p>
+    <h3>Cards</h3>
+    <cyan-card>
+      <h2 class="withGrid">Headline2, in a card</h2>
+    </cyan-card>
+    <p>A <cyan-code>h2</cyan-code> is downscaled to level 3 in a Card. Do note, that the card variant will also be downscaled to
+      level 4 for mobile viewport.</p>
+    <p>In general, using a <cyan-code>h2</cyan-code> in a card, is discouraged.</p>
+  </article>
+
+  <article class="Column">
+    <h2>h3</h2>
+    <p>The <cyan-code>h3</cyan-code> element and the accompanying class <cyan-code>.TypeheadLine3</cyan-code> are 
+      used for small headings in a view.</p>
+    <h3>Desktop and tablet</h3>
+    <section class="withGrid">
+      <h3>H3 abc</h3>
+    </section>
+    <p>The large screen variant for 3rd level headings follows google material design suggenstions, for the chosen
+      font (Lato). Should you override the font - please also check the material font tool suggestions for full
+      list of suggested font styles.</p>
+    <h3>Mobile</h3>
+    <section class="withGrid">
+      <h3 class="downscaled">Headline3, downscaled</h3>
+    </section>
+    <p>The downscaled variant of a <cyan-code>h3</cyan-code> uses font styles from material design tool level 5 headings.
+      On mobile screens, the base variant is automatically downscaled, so there should be no difference between the variants.</p>
+    <h3>Cards</h3>
+    <cyan-card>
+      <h3 class="withGrid">Headline3, in a card</h3>
+    </cyan-card>
+    <p>A <cyan-code>h3</cyan-code> is downscaled to level 4 in a Card. Do note, that the card variant will also be downscaled to
+      level 5 for mobile viewport.</p>
+    <p>In general card headings should default to <cyan-code>h3</cyan-code>.</p>
+  </article>
+
+  <article class="Column">
+    <h2>h4</h2>
+    <p>The <cyan-code>h4</cyan-code> element and the accompanying class <cyan-code>.TypeheadLine4</cyan-code> are 
+      used for the smallest headers available.</p>
+    <h3>Desktop and tablet</h3>
+    <section class="withGrid">
+      <h4>H4 abc</h4>
+    </section>
+    <p>The large screen variant for 4th level headings follows google material design suggenstions, for the chosen
+      font (Lato). Should you override the font - please also check the material font tool suggestions for full
+      list of suggested font styles.</p>
+    <h3>Mobile</h3>
+    <section class="withGrid">
+      <h4 class="downscaled">Headline4, downscaled</h4>
+    </section>
+    <p>The downscaled variant of a <cyan-code>h4</cyan-code> uses font styles from material design tool level 6 headings.
+      On mobile screens, the base variant is automatically downscaled, so there should be no difference between the variants.</p>
+    <h3>Cards</h3>
+    <section class="card rise-a">
+      <h4 class="withGrid">Headline4, in a card</h4>
+    </section>
+    <p>A <cyan-code>h4</cyan-code> is downscaled to level 5 in a Card. Do note, that the card variant will also be downscaled to
+      level 6 for mobile viewport.</p>
+    <p>In general a second level heading in a card should use <cyan-code>h4</cyan-code>.</p>
+  </article>  
+  
+  <article class="Column">
+    <h2>Type Color</h2>
+    <section>
+      <h3>Paragraphs</h3>
+      <p>This is a plain paragraph. The font family is <cyan-code>Open Sans</cyan-code> and text-is either white, 
+        or black, with opacity 0.87 and 0.74, respectively.</p>
+      <p class="TypeBody2">This is a paragraph with the style <cyan-code>TypeBody2</cyan-code>, which should make the text a bit smaller.</p>
+      <p class="TypeCaption">This is a paragraph with the style<cyan-code>TypeCaption.</cyan-code>, which should make the text very small, and change the font to UI font.</p>
+      <h4>Low emphasis</h4>
+      <p class="lowEmphasis">This paragraph has the "atomic" style <cyan-code>lowEmphahis</cyan-code>, and should have low emphasis, and thus opacity of 0.60</p>
+      <p class="TypeBody2 lowEmphasis">And the same, in the smaller text size</p>
+      <h4>Disabled</h4>
+      <p data-disabled>This paragraph is <cyan-code>disabled</cyan-code>, and should have, and thus opacity of 0.38</p>
+    </section>
+  </article>
+
+  <article class="Column">
+    <h2>Body text</h2>
+    
+    <blockquote>
+      <h4>Quoting?</h4>
+      <p>And a quote!</p>
+    </blockquote>
+  </article>
+
+  <article class="Column large">
+    <h2>Column width</h2>
+    <p class="TypeBody2 lowEmphasis">The width of text elements is bounded by artificial <cyan-code>ch</cyan-code>.</p>
+
+    <div class="widthExamples">
+      <div class="wd1 TypeBody2">
+        This div is 67ch wide
+      </div>
+      <div class="wd2 TypeBody2">
+        This div is 42ch wide (golden ratio from 67ch)
+      </div>
+      <div class="wd3 TypeBody2">
+        This div is 26ch wide (golden ratio from 42ch)
+      </div>
+    </div>
+    <p>The three "book-sized" paragraphs lend us to following measurements:</p>
+    <ul>
+      <li>67ch is roughly 700 px (in 4px increments)</li>
+      <li>42ch is roughly 440 px (in 4px increments)</li>
+      <li>26ch is roughly 272 px (in 4px increments)</li>
+    </ul>
+    <p>If a container is wider than 700px, a paragraph should have 2 columns.</p>
+  </article>
+  </div>
+</main>
+</PageWithTray>
+
+<style>
+.widthExamples {
+  overflow: visible;
+}
+.wd1 {
+  background-color: var(--chroma-primary-c);
+  width: 67ch;
+}
+.wd2 {
+  background-color: var(--chroma-primary-d);
+  width: 42ch;
+}
+.wd3 {
+  background-color: var(--chroma-primary-e);
+  width: 26ch;
+  overflow: hidden;
+  height: 24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.withGrid {
+  background-image: url(/grid.svg);
+  background-size: 24px 24px;
+  background-repeat: repeat;
+  border-radius: 24px;
+}
+</style>
