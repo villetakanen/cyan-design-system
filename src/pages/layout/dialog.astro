@@ -1,0 +1,57 @@
+---
+import PageWithTray from '@layouts/PageWithTray.astro';
+import LayoutsTray from 'src/components/server/LayoutsTray.astro';
+---
+<PageWithTray>
+  <LayoutsTray slot="tray" />
+  <div class="content-columns">
+    <article>
+      <h1>Dialog</h1>
+      <p>As the plain HTML dialog is now widely available, we'll refactor the <code>cn-dialog</code> custom
+        element to a styled native component. This follows the pattern we succesfully used with inputs,
+        and should result in better support for accessibility and styling across the browsers</p>
+    </article>
+    <article>
+      <h2>Example</h2>
+      <button type="button" id="open-dialog">Open dialog</button>
+    </article>
+  </div>
+  <dialog 
+    id="dialog" 
+    aria-labelledby="dialog-title"
+    aria-modal="true"
+    role="dialog">
+    <div class="header">
+      <button type="button" class="close icon text" aria-label="Close dialog" 
+      onclick="dialog.close()">
+        <cn-icon noun="close" class="close" aria-label="Close dialog"></cn-icon>
+      </button>
+      <h2 id="dialog-title">Dialog title</h2>
+    </div>
+    
+    <button type="button" id="close-dialog">Close dialog</button>
+    <p>Dialog content</p>
+  </dialog>
+  <script is:inline>
+    const dialog = document.getElementById('dialog');
+    const openDialog = document.getElementById('open-dialog');
+    const closeDialog = document.getElementById('close-dialog');
+
+
+    dialog.showModal();
+
+    openDialog.addEventListener('click', () => {
+      dialog.showModal();
+    });
+
+    closeDialog.addEventListener('click', () => {
+      dialog.close();
+    });
+
+    dialog.addEventListener('close', () => {
+      openDialog.focus();
+    });
+  </script>
+</PageWithTray>
+
+
