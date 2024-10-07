@@ -9,7 +9,7 @@ The two dropdowns here show that the menu opens to left or right depending on th
 menu is closer to the edge of the screen.
 
 <div class="flex justify-space-between">
-<cn-menu>
+<cn-menu aria-expanded="true">
   <ul>
     <li><a href="#">Link 1</a></li>
     <li><a href="#">
@@ -24,7 +24,7 @@ menu is closer to the edge of the screen.
   </ul>
 </cn-menu>
 
-<cn-menu>
+<cn-menu class="secondary" aria-expanded="true">
   <ul>
     <li><a href="#">Link 1</a></li>
     <li><a href="#">Link 2</a></li>
