@@ -22,6 +22,12 @@ const componentDirectory = [
     noun: 'layout',
     nodename: 'cn-snackbar',
   },
+  {
+    slug: 'editor',
+    longname: 'Editor',
+    noun: 'layout',
+    nodename: 'cn-editor',
+  }
 ];
 ---
 
@@ -30,7 +36,7 @@ const componentDirectory = [
   {
     componentDirectory.map(p => (
       <li>
-        <a href={'/docs/fi/' + p.slug}>
+        <a href={'/elements/' + p.slug}>
           {p.noun && <cn-icon noun={p.noun} small></cn-icon>}
           {p.longname} <br>
           <code>{p.nodename}</code>

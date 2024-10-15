@@ -1,0 +1,29 @@
+---
+import ModalPage from "@layouts/ModalPage.astro";
+
+---
+<ModalPage>
+  <div class="content-editor">
+    <h1>Editor</h1>
+    <div class="grow">
+        <cn-editor></cn-editor>
+    
+        <script is:inline>
+          const editor = document.querySelector('cn-editor');
+
+          editor.addEventListener('input', (e) => {
+            console.log('Editor value changed:', e.detail.value);
+          });
+    
+          // Example usage of the component's methods
+          setTimeout(() => {
+            editor.insertText('This text was inserted programmatically!');
+            editor.select();
+          }, 1000);
+        </script>
+    </div>
+    <div class="toolbar">
+        <button class="btn" onclick="editor.select();editor.insertText('')">Clear</button>
+    </div>
+  </div>
+</ModalPage>
