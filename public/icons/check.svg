@@ -9,5 +9,5 @@
       }
     </style>
   </defs>
-  <polygon  id="icon" points="0 59.7 13.6 45.8 45 70.1 114.6 12.6 128 26.8 47.5 115.4 0 59.7"/>
+  <polygon fill="currentColor" id="icon" points="0 59.7 13.6 45.8 45 70.1 114.6 12.6 128 26.8 47.5 115.4 0 59.7"/>
 </svg>

@@ -1,0 +1,92 @@
+---
+import PageWithTray from '@layouts/PageWithTray.astro';
+import LayoutsTray from 'src/components/server/LayoutsTray.astro';
+---
+<PageWithTray>
+  <LayoutsTray slot="tray" />
+  <div class="content-columns">
+    <article>
+      <h1>App-bar</h1>
+
+      <p>We provide a Material-UI style app-bar component, with some auto-styling, 
+        modes for modal and sticky, and support for elevation</p>
+
+      <h4>Example</h4>
+
+      <div class="p-2 example-container" style="max-height: 200px;overflow-y:scroll;">
+        <cn-app-bar
+          title="App Bar, with very very long name"
+        >
+          <cn-share-button></cn-share-button>
+        </cn-app-bar>
+        <div
+          class="mt-1"
+        style="height: 400px; background-color:var(--color-secondary); padding: 1rem;">
+          <p>Scroll down to see the app-bar change</p>
+        </div>
+      </div>
+
+
+      <div class="toolbar">
+        <label>
+          <span><code>mode</code></span>
+          <select id="modeSelect">
+            <option value="">default</option>
+            <option value="modal">modal</option>
+            <option value="sticky">sticky</option>
+          </select>
+        </label>
+
+        <label>
+          <span><code>noun</code></span>
+          <select id="nounSelect">
+            <option value="">default</option>
+            <option value="fox">fox</option>
+            <option value="adventurer">adventurer</option>
+          </select>
+        </label>
+      </div>
+  
+      <h4>Helper</h4>
+
+      <p>The box below will just enable page scrolling tests.</p>
+
+      <div style="height: 100vh; background-color:var(--color-secondary); padding: 1rem;">
+        <p>Scroll down to see the app-bar change</p>
+      </div>
+
+      <script is:inline>
+        document.querySelector('#modeSelect').addEventListener('change', (e) => {
+          const mode = e.target.value || undefined
+          const appBar = document.querySelector('cn-app-bar')
+          if (mode) {
+            appBar.setAttribute('mode', mode)
+          } else {
+            appBar.removeAttribute('mode')
+          }
+        });
+
+        document.querySelector('#nounSelect').addEventListener('change', (e) => {
+          const noun = e.target.value || undefined
+          const appBar = document.querySelector('cn-app-bar')
+          if (noun) {
+            appBar.setAttribute('noun', noun)
+          } else {
+            appBar.removeAttribute('noun')
+          }
+        });
+
+
+      </script>
+    </article>
+
+    
+
+  </div>
+</PageWithTray>
+
+<style>
+  .example-container {
+    background-color: #211;
+  }
+</style>

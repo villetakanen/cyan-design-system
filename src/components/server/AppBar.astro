@@ -2,14 +2,9 @@
 const { title, noun, modal } = Astro.props;
 const pageTitle = title || 'Cyan Design System [NEXT]';
 
-const styles = ['app-bar', 'cn-app-bar', modal ? 'modal' : ''];
+const mode = modal ? 'modal' : 'sticky';
 ---
-<header class={styles.join(' ')}>
-  <h3>
-    { noun && <cn-icon noun={noun} style="margin-right: 8px"></cn-icon> }
-    { pageTitle }</h3>
-  <slot></slot>
-  <div style="flex: 1"></div>
+<cn-app-bar title={pageTitle} noun={noun} mode={mode}>
   <cn-lightmode-button></cn-lightmode-button>
   <cn-share-button></cn-share-button>
-</header>
+</cn-app-bar>

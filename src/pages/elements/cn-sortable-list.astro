@@ -1,0 +1,34 @@
+---
+import Page from '@layouts/Page.astro'
+---
+<Page>
+    <div class="content-columns">
+        <article>
+          <cn-sortable-list>
+            <div slot="slotted">
+              <button onclick="console.log('clicked')">one</button>
+            </div>
+          </cn-sortable-list>
+        </article>
+      </div>
+  </Page>
+  
+  <script is:inline>
+
+const demoList = [
+  { key: 'slotted', title: 'one'},
+  { key: '2', title: 'two'},
+  { key: '3', title: 'three'},
+  
+]
+    // Assuming 'cn-sortable-list' is already defined globally
+  
+    const sortableList = document.querySelector('cn-sortable-list');
+  
+    // Set the items when the component is loaded
+    sortableList.items = demoList; 
+
+    sortableList.addEventListener('items-changed', (event) => {
+        console.log('Sortable list order changed:', event.detail);
+    });
+  </script>

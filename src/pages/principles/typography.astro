@@ -7,8 +7,33 @@ import PageWithTray from '@layouts/PageWithTray.astro';
   <div class="content-columns">
     <TextBodyArticle />
 
+    <article class="column">
+      <h2>Body text</h2>
+      
+      <blockquote>
+        <h4>Quoting?</h4>
+        <p>And a quote!</p>
+      </blockquote>
+  
+      <h3>Lists</h3>
+  
+      <h4>Ordered list</h4>
+  
+      <ol>
+        <li>An Item</li>
+        <li>Another Item</li>
+      </ol>
+  
+      <h4>Unordered list</h4>
+  
+      <ul>
+        <li>An item</li>
+        <li>Another item</li>
+      </ul>
+  
+    </article>
 
-    <article class="small Column">
+    <article class="column-s">
         <cn-card elevation="1">
         <div style="border: solid 1px var(--cyan-color-medium); border-radius: 50%; height: 128px; width: 128px;margin: 12px auto 24px auto">
           <cn-icon noun="font" xlarge />
@@ -20,6 +45,8 @@ import PageWithTray from '@layouts/PageWithTray.astro';
         <pre class="code">{'<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">'}</pre>
         </cn-card>
       </article>
+
+      
 
 <article class="Column">
     <h2>h1</h2>
@@ -122,31 +149,8 @@ import PageWithTray from '@layouts/PageWithTray.astro';
       level 6 for mobile viewport.</p>
     <p>In general a second level heading in a card should use <cyan-code>h4</cyan-code>.</p>
   </article>  
-  
-  <article class="Column">
-    <h2>Type Color</h2>
-    <section>
-      <h3>Paragraphs</h3>
-      <p>This is a plain paragraph. The font family is <cyan-code>Open Sans</cyan-code> and text-is either white, 
-        or black, with opacity 0.87 and 0.74, respectively.</p>
-      <p class="TypeBody2">This is a paragraph with the style <cyan-code>TypeBody2</cyan-code>, which should make the text a bit smaller.</p>
-      <p class="TypeCaption">This is a paragraph with the style<cyan-code>TypeCaption.</cyan-code>, which should make the text very small, and change the font to UI font.</p>
-      <h4>Low emphasis</h4>
-      <p class="lowEmphasis">This paragraph has the "atomic" style <cyan-code>lowEmphahis</cyan-code>, and should have low emphasis, and thus opacity of 0.60</p>
-      <p class="TypeBody2 lowEmphasis">And the same, in the smaller text size</p>
-      <h4>Disabled</h4>
-      <p data-disabled>This paragraph is <cyan-code>disabled</cyan-code>, and should have, and thus opacity of 0.38</p>
-    </section>
-  </article>
 
-  <article class="Column">
-    <h2>Body text</h2>
-    
-    <blockquote>
-      <h4>Quoting?</h4>
-      <p>And a quote!</p>
-    </blockquote>
-  </article>
+  
 
   <article class="Column large">
     <h2>Column width</h2>
