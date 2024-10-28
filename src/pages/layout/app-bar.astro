@@ -5,7 +5,7 @@ import LayoutsTray from 'src/components/server/LayoutsTray.astro';
 <PageWithTray>
   <LayoutsTray slot="tray" />
   <div class="content-columns">
-    <article>
+    <article class="column-l">
       <h1>App-bar</h1>
 
       <p>We provide a Material-UI style app-bar component, with some auto-styling, 
@@ -15,6 +15,7 @@ import LayoutsTray from 'src/components/server/LayoutsTray.astro';
 
       <div class="p-2 example-container" style="max-height: 200px;overflow-y:scroll;">
         <cn-app-bar
+          id="demo-app-bar"
           title="App Bar, with very very long name"
         >
           <cn-share-button></cn-share-button>
@@ -58,7 +59,7 @@ import LayoutsTray from 'src/components/server/LayoutsTray.astro';
       <script is:inline>
         document.querySelector('#modeSelect').addEventListener('change', (e) => {
           const mode = e.target.value || undefined
-          const appBar = document.querySelector('cn-app-bar')
+          const appBar = document.querySelector('#demo-app-bar')
           if (mode) {
             appBar.setAttribute('mode', mode)
           } else {
@@ -68,7 +69,7 @@ import LayoutsTray from 'src/components/server/LayoutsTray.astro';
 
         document.querySelector('#nounSelect').addEventListener('change', (e) => {
           const noun = e.target.value || undefined
-          const appBar = document.querySelector('cn-app-bar')
+          const appBar = document.querySelector('#demo-app-bar')
           if (noun) {
             appBar.setAttribute('noun', noun)
           } else {
