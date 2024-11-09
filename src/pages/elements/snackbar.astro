@@ -13,28 +13,22 @@ import ComponentsTray from 'src/components/server/ComponentsTray.astro';
         <SnackbarCode />
       </article>
     </div>
-    <script is:inline lang="typescript">
-      /*const snackbar = document.querySelector('cn-snackbar');
-      console.log('snackbar', snackbar);
-      if (snackbar) {
-        document.getElementById('demoSnackbarButton').addEventListener('click', () => {
-          const message = document.getElementById('demoSnackbarInput').value;
-          snackbar.push(message);
-        });
-      }*/
-
-      document.getElementById('demoSnackbarButton').addEventListener('click', () => {
-
-        const event = new CustomEvent('cn-snackbar-add', {
-          detail: {
-            message: document.getElementById('demoSnackbarInput').value || 'Hello, world!',
-          },
-        });
-
-        window.dispatchEvent(event);
-
-        console.log('event fired');
-      });
+  <script is:inline>
+    document.getElementById('demoSnackbarButton').addEventListener('click', () => {
+      const message = (document.getElementById('demoSnackbarInput')).value || 'Hello, world!'; 
     
-    </script>
+      // Create and dispatch the custom event
+      const event = new CustomEvent('cn-snackbar-add', {
+        detail: { message }, 
+      });
+      window.dispatchEvent(event);
+    
+      console.log('event fired', message); 
+    });
+    
+    // Add an event listener to log when the snackbar is added to the DOM
+    document.addEventListener('cn-snackbar-connected', () => {
+      console.log('cn-snackbar connected to the DOM');
+    });
+  </script>
 </PageWithTray>
