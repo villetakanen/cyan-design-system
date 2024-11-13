@@ -5,6 +5,9 @@
     },
     {
       "path": "./cyan-next"
+    },
+    {
+      "path": "cyan-next/cn-dice"
     }
   ],
   "settings": {}
