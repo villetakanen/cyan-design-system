@@ -100,14 +100,6 @@ const chroma_surface = [
 
 const chroma_key = [
   {
-    color: 'var(--chroma-key-10)',
-    title: '10',
-  },
-  {
-    color: 'var(--chroma-key-20)',
-    title: '20',
-  },
-  {
     color: 'var(--chroma-key-30)',
     title: '30',
   },
@@ -141,6 +133,53 @@ const chroma_key = [
   },
   {
     color: 'var(--chroma-key-99)',
+    title: '99',
+  },
+];
+
+const chroma_secondary = [
+  {
+    color: 'var(--chroma-secondary-10)',
+    title: '10',
+  },
+  {
+    color: 'var(--chroma-secondary-20)',
+    title: '20',
+  },
+  {
+    color: 'var(--chroma-secondary-30)',
+    title: '30',
+  },
+  {
+    color: 'var(--chroma-secondary-40)',
+    title: '40',
+  },
+  {
+    color: 'var(--chroma-secondary-50)',
+    title: '50',
+  },
+  {
+    color: 'var(--chroma-secondary-60)',
+    title: '60',
+  },
+  {
+    color: 'var(--chroma-secondary-70)',
+    title: '70',
+  },
+  {
+    color: 'var(--chroma-secondary-80)',
+    title: '80',
+  },
+  {
+    color: 'var(--chroma-secondary-90)',
+    title: '90',
+  },
+  {
+    color: 'var(--chroma-secondary-95)',
+    title: '95',
+  },
+  {
+    color: 'var(--chroma-secondary-99)',
     title: '99',
   },
 ];
@@ -217,6 +256,9 @@ const primary_palette = [
 
       <h4>--chroma-primary-[code]</h4>
       <CnColorPaletteDemo palette={chroma_primary} />
+
+      <h5>--chroma-secondary-[code]</h5>
+      <CnColorPaletteDemo palette={chroma_secondary} />
     </article>
   </div>
 </Page>
