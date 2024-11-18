@@ -1,0 +1,7 @@
+.grid-2 {
+  /* 1 by 1 grid */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--gap);
+  margin: var(--grid) auto;
+}
