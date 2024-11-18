@@ -1,0 +1,106 @@
+---
+import PageWithTray from "@layouts/PageWithTray.astro";
+---
+
+<PageWithTray>
+  <div class="content-columns">
+    <article class="column-l">
+      <h1>Units and sizes</h1>
+      <p>Our design system employs an 8px grid system for consistent sizing and spacing. All measurements
+        are derived from half the root em size (8px). Since we use relative units based on the root em,
+        this ensures proper scaling for accessibility needs.</p>
+      <h4>Base units</h4>
+      <div class="flex">
+        <div class="example-frame">
+          <div class="example-box" style="height:var(--cn-grid)"></div>
+          <span>--cn-grid (8px)</span>
+        </div>
+
+        <div class="example-frame">
+          <div class="example-box" style="height:var(--cn-gap)"></div>
+          <span>--cn-gap (16px)</span>
+        </div>
+
+        <div class="example-frame">
+            <div class="example-box" style="height:var(--cn-line)"></div>
+            <span>--cn-line (24px)</span>
+          </div>
+      </div>
+
+      <h4>Button Sizing</h4>
+
+    <p>
+      All buttons maintain a minimum clickable area of 56x56 pixels to ensure optimal touch 
+      interaction, even when their visual appearance is smaller. Below are the standard 
+      visual button sizes used in our system.
+    </p>
+
+      <table>
+        <tr>
+          <th>--cn-button-physical-size</th>
+          <td>
+            <div class="example-frame">
+              <div class="button-frame">
+                <div class="example-circle" style="height:var(--cn-button-physical-size)"></div>
+              </div>
+              <span class="text-caption">(56px)</span>
+            </div>
+          </td>
+        <tr>
+        <tr>
+          <th>--cn-button-size</th>
+          <td>
+            <div class="example-frame">
+              <div class="button-frame">
+                <div class="example-circle" style="height:var(--cn-button-size)"></div>
+              </div>
+              <span class="text-caption">(38px)</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+            <th>--cn-navigation-button-size</th>
+            <td>
+              <div class="example-frame">
+                <div class="button-frame">
+                  <div class="example-circle" style="height:var(--cn-navigation-button-size)"></div>
+                </div>
+                <span class="text-caption">(48px)</span>
+              </div>
+            </td>
+          </tr>
+      </table>
+    
+    </article>
+  </div>
+</PageWithTray>
+
+<style>
+.button-frame {
+  aspect-ratio: 1 / 1;
+  background-color: color-mix(in hsl, var(--chroma-surface-50), transparent 50%);
+  flex-grow: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+}
+.example-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--cn-grid);
+}
+.example-box {
+  aspect-ratio: 1 / 1;
+  background-color: var(--color-notify);
+  flex-grow: 0;
+}
+.example-circle {
+  aspect-ratio: 1 / 1;
+  background-color: var(--color-notify);
+  flex-grow: 0;    
+  border-radius: 50%;
+}
+</style>
