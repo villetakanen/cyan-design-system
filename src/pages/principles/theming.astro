@@ -1,15 +1,23 @@
 ---
+import PrinciplesToc from '@components/server/PrinciplesToc.astro';
 import PageWithTray from '@layouts/PageWithTray.astro';
 ---
 
 <PageWithTray>
+  <PrinciplesToc slot="tray" />
   <div class="content-columns">
     <article class="column-l">
       <h1>Theming</h1>
       <p>Theming is the ability to change the look and feel of a website or application by changing the colors, typography, and other visual elements. This can be done by changing the CSS stylesheets, or by using a design system like Cyan.</p>
       <p>With Cyan, you can easily change the theme of your website by changing the CSS variables in the <code>custom.css</code> file. You can also use the <code>theme-dark</code> and <code>theme-light</code> buttons below to switch between dark and light themes.</p>
-      <button id="theme-dark">Dark-theme</button>
-      <button id="theme-light">Light-theme</button>
+      <div class="grid-2">
+        <div class="force-dark surface p-1 text-center">
+          <button id="theme-dark">Dark-theme</button>
+        </div>
+        <div class="force-light surface p-1 text-center">
+          <button id="theme-light">Light-theme</button>
+        </div>
+      </div>
   </div>
   <script is:inline>
     document.getElementById("theme-dark").addEventListener("click", () => {
