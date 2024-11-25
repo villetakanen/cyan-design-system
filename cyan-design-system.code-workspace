@@ -8,6 +8,9 @@
     },
     {
       "path": "cyan-next/cn-dice"
+    },
+    {
+      "path": "cyan-next/cn-editor"
     }
   ],
   "settings": {}
