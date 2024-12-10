@@ -1,5 +1,5 @@
 ---
-name: 'Loading animations'
+title: 'Loading animations'
 nodename: 'cn-loader'
 noun: 'fox'
 ---

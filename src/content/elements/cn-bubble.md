@@ -1,5 +1,5 @@
 ---
-name: 'Bubbles'
+title: 'Bubbles'
 noun: 'card'
 nodename: 'cn-bubble'
 ---

@@ -1,49 +1,15 @@
 ---
-import { getCollection } from 'astro:content';
 import PageWithTray from '@layouts/PageWithTray.astro';
-import { logDebug } from 'cyan-next/src/utils/logHelpers';
 import ComponentsTray from 'src/components/server/ComponentsTray.astro';
-const allComponents = await getCollection('elements');
-logDebug('found', allComponents.length, 'elements');
-
-const componentDirectory = [
-  ...allComponents.map((p) => ({
-    slug: p.slug,
-    longname: p.data.name,
-    noun: p.data.noun,
-    nodename: p.data.nodename,
-  })),
-  {
-    slug: 'cn-dialog',
-    longname: 'cn-dialog',
-    noun: 'layout',
-    nodename: 'cn-dialog',
-  },
-  {
-    slug: 'snackbar',
-    longname: 'Snackbar',
-    noun: 'layout',
-    nodename: 'cn-snackbar',
-  },
-];
-
-logDebug('displaying', componentDirectory, 'elements');
+import ElementsToc from '@components/server/ElementsToc.astro';
 ---
 
 <PageWithTray>
   <ComponentsTray slot="tray" />
   <div class="content-columns">
     <article class="content-columns">
-	<h1>Web Components</h1>
-    <p>We have {componentDirectory.length} web components.</p>
-    {componentDirectory.map(p => (
-        <p>
-          <a href={'/elements/'+p.slug}>
-            {p.noun ? <cn-icon noun={p.noun} xsmall /> : ''}
-            {p.longname} <br>
-            <code>{p.nodename}</code></a>
-        </p>
-      ))}
+	    <h1>Web Components</h1>
+      <ElementsToc />
     </article>
   </div>
 </PageWithTray>

@@ -1,5 +1,5 @@
 ---
-name: "Pop-up Menus"
+title: "Pop-up Menus"
 nodename: 'cn-menu'
 noun: 'layout'
 ---

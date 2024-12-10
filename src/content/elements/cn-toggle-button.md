@@ -1,5 +1,5 @@
 ---
-name: 'Toggle buttons'
+title: 'Toggle buttons'
 nodename: 'cn-toggle-button'
 noun: 'filter'
 ---

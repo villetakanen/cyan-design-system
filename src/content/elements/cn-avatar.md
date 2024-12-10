@@ -1,5 +1,5 @@
 ---
-name: "Avatars"
+title: "Avatars"
 nodename: 'cn-avatar'
 noun: 'avatar'
 ---

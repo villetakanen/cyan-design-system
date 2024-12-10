@@ -1,5 +1,5 @@
 ---
-name: "Social Share Button"
+title: "Social Share Button"
 nodename: 'cn-share-button'
 noun: 'check'
 ---

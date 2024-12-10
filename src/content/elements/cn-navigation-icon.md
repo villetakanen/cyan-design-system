@@ -1,7 +1,7 @@
 ---
-name: 'Navigation Icons (buttons)'
+title: 'Navigation Icons (buttons)'
 nodename: 'cn-navigation-icon'
-noun: 'card'
+icon: 'card'
 ---
 
 ## Navigation icons
