@@ -1,8 +1,9 @@
-<ul>
-  <li>
-    <a href="/principles/theming">Theming</a>
-  </li>
-  <li>
-    <a href="/principles/units">Units and sizes</a>
-  </li>
-</ul>
+---
+import CollectionNav from "./CollectionNav.astro";
+
+const links = [
+  { href: "/principles/theming", text: "Theming" },
+  { href: "/principles/units", text: "Units and sizes" },
+];
+---
+<CollectionNav collection="principles" links={links} />
