@@ -1,6 +1,4 @@
 ---
-const currentPath = Astro.url.pathname;
-
 type RailItem = {
   label?: string;
   href: string;
@@ -53,14 +51,12 @@ const rail: Array<RailItem> = [
 <nav class="rail">
   {
     rail.map((item) => {
-      const isActive = currentPath === item.href;
       return (
         <a href={item.href}>
           <cn-navigation-icon
-            active = {isActive}
             noun={item.icon}
             label={item.label}
-            checked={currentPath === item.href}
+            active={Astro.url.pathname === item.href ? 'true' : undefined}
           />
         </a>
       );
