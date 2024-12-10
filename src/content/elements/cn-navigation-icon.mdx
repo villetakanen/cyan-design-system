@@ -9,7 +9,7 @@ icon: 'card'
 A <code>cn-navigation-icon</code> element is a styled icon that displays an icon and an optional label. It is used to navigate to a different page or section of a page. The element takes 56x56 pixels of space by default, and should
 be placed inside a <code>a</code> or <code>button</code> element.
 
-<div class="flex flex-row">
+<div class="flex flex-row flex-no-wrap">
   <nav class="flex flex-col border-radius border py-1" style="width: 80px">
     <cn-navigation-icon noun="fox"></cn-navigation-icon>
     <cn-navigation-icon noun="card" label="cards"></cn-navigation-icon>
@@ -19,8 +19,15 @@ be placed inside a <code>a</code> or <code>button</code> element.
     <cn-navigation-icon noun="fox"></cn-navigation-icon>
     <cn-navigation-icon noun="card" label="card"></cn-navigation-icon>
   </nav>
+  <div class="border border-radius p-2 grow">
+    <cn-toggle-button id="toggleActive" label="Active"></cn-toggle-button>
+  </div>
 </div>
 
+<script>{`document.getElementById('toggleActive').addEventListener('change', (event) => {console.log(event.target.pressed);document.querySelectorAll('cn-navigation-icon').forEach((icon) => {icon.active = event.target.pressed});});`}</script>
+
+
+  
 The icon handles all visual aspects of the icon, including the icon itself, the label, and the hover effect. It 
 
 #### Code 
