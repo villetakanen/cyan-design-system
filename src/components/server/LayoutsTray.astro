@@ -11,7 +11,7 @@ type CollectionItem = {
 };
 
 const allComponents: CollectionItem[] = collection.map((page) => ({
-  slug: page.slug,
+  slug: page.id,
   data: {
     name: `${page.data.name}`,
     noun: `${page.data.noun}`,

@@ -22,6 +22,13 @@ export const layout = defineCollection({
     icon: z.string(),
   }),
 });
+export const inputs = defineCollection({
+  loader: glob({ pattern: '**/[^_]*.md', base: './src/content/inputs' }),
+  schema: z.object({
+    title: z.string(),
+    icon: z.string(),
+  }),
+});
 export const elements = defineCollection({
   loader: glob({ pattern: '**/[^_]*.md[x]', base: './src/content/elements' }),
   schema: z.object({

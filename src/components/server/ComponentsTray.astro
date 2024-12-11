@@ -5,7 +5,7 @@ const allComponents = await getCollection('elements');
 
 const componentDirectory = [
   ...allComponents.map((p) => ({
-    slug: p.slug,
+    slug: p.id,
     longname: p.data.name,
     noun: p.data.noun,
     nodename: p.data.nodename,

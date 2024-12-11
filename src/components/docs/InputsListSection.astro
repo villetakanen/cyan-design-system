@@ -8,7 +8,7 @@ const allComponents = await getCollection('inputs');
 { allComponents.map(
   p => (
     <li>
-      <a href={`/inputs/${p.slug}`}>
+      <a href={`/inputs/${p.id}`}>
         {p.data.noun ? 
           <cn-icon noun={p.data.noun} xsmall></cn-icon> 
           : ''

@@ -8,7 +8,7 @@ const allComponents = await getCollection('css');
 { allComponents.map(
   p => (
     <li>
-      <a href={`/css/${p.slug}`}>
+      <a href={`/css/${p.id}`}>
         {p.data.name} 
        
       </a>
