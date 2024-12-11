@@ -15,7 +15,7 @@ A button has three substyles: [default], `.text` and `.call-to-action`. All thre
 | --- | --- | --- |
 | <button>Default</button> | `<button>Default</button>` | A default button |
 | <button class="text">Text</button> | `<button class="text">Text</button>` | A text button |
-| <button class="call-to-action">Call to Action</button> | `<button class="call-to-action">Call to Action</button>` | A call to action button |
+| <button class="call-to-action">Call to Action</button> | `<button class="cta">Call to Action</button>` | A call to action button |
 
 #### Disabled Buttons
 

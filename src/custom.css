@@ -5,3 +5,11 @@
   grid-gap: var(--gap);
   margin: var(--grid) auto;
 }
+.color-box {
+  --color-box-size: 4;
+  height: calc(var(--color-box-size) * var(--cn-grid));
+  width: calc(var(--color-box-size) * var(--cn-grid) * 3);
+  border: solid 1px var(--color-border);
+  border-radius: 8px;
+  display: inline-block;
+}

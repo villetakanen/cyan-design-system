@@ -1,9 +1,10 @@
 ---
-import Page from '@layouts/Page.astro';
 import PrinciplesToc from '@components/server/PrinciplesToc.astro';
+import PageWithTray from '@layouts/PageWithTray.astro';
 ---
 
-<Page>
+<PageWithTray>
+  <PrinciplesToc slot="tray" />
   <div class="content-columns">
 	<article class="column-l">
        <h1>Principles</h1>
