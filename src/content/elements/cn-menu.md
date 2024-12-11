@@ -1,7 +1,7 @@
 ---
 title: "Pop-up Menus"
 nodename: 'cn-menu'
-noun: 'layout'
+icon: 'layout'
 ---
 ### Examples
 
@@ -18,7 +18,9 @@ menu is closer to the edge of the screen.
     <li><a href="/">Link 3: to root</a></li>
   </ul>
   <ul>
-    <li><a href="#">Link 4</a></li>
+    <li><a href="#">
+      <cn-icon noun="fox" xsmall></cn-icon>
+      Link 4</a></li>
     <li><a href="#">Link 5</a></li>
     <li><a href="#">Link 6</a></li>
   </ul>
