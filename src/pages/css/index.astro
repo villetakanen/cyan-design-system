@@ -1,19 +1,15 @@
 ---
-import { getCollection } from 'astro:content';
+import CssToc from '@components/server/CssToc.astro';
 import PageWithTray from '@layouts/PageWithTray.astro';
-import { logDebug } from 'cyan-next/src/utils/logHelpers';
-import CSSListSection from 'src/components/docs/CSSListSection.astro';
-const allComponents = await getCollection('css');
-logDebug('found', allComponents.length, 'layout pages');
 ---
 
 <PageWithTray>
-  <CSSListSection slot="tray"/>
+  <CssToc slot="tray"/>
   <div class="content-columns">
     <article class="column-l">
-	    <h1>App Layout</h1>
-      <p>We have {allComponents.length} pages.</p>
-      <CSSListSection />
+	    <h1>CSS</h1>
+      <h2>Generics and Atomics</h2>
+      <CssToc />
     </article>
   </div>
 </PageWithTray>

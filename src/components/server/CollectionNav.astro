@@ -8,25 +8,25 @@ interface link {
 }
 
 interface Props {
-  collection: 'principles' | 'elements';
-  links: link[]
+  collection: 'principles' | 'elements' | 'css';
+  links?: link[];
 }
 
 const { collection, links } = Astro.props as Props;
 
 const posts = await getCollection(collection);
 
-const mergedLinks: link[] = [...links]
-  
+const mergedLinks: link[] = links ? [...links] : [];
+
 for (const post of posts) {
   mergedLinks.push({
     href: `/${collection}/${post.id}`,
-    text: post.data.title,
-    icon: post.data.icon
-  })
+    text: post.data.title || post.id,
+    icon: post.data.icon,
+  });
 }
 
-mergedLinks.sort((a, b) => a.text.localeCompare(b.text))
+mergedLinks.sort((a, b) => a.text.localeCompare(b.text));
 
 const collectionName = collection.charAt(0).toUpperCase() + collection.slice(1);
 ---
