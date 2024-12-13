@@ -4,7 +4,7 @@ import PageWithTray from '@layouts/PageWithTray.astro';
 import InputsListSection from 'src/components/docs/InputsListSection.astro';
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
-  const posts = await getCollection('elements');
+  const posts = await getCollection('inputs');
   return posts.map((post) => ({
     params: { id: post.id },
     props: { post },
